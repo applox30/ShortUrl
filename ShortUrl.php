@@ -1,8 +1,8 @@
-<?php /* Source By @Roonx_Team */
+<?php /* Source By @applox3*/
 
-define('API_KEY', 'TOKEN');
-$admin = "ADMIN";
-function roonx($method,$datas=[]){
+define('API_KEY', '346881180:AAEtvHhmLRTWzAGVJGTyEUaFmmi4VUhPIN4');
+$admin = "228873878";
+function applox($method,$datas=[]){
     $url = "https://api.telegram.org/bot".API_KEY."/".$method;
     $ch = curl_init();
     curl_setopt($ch,CURLOPT_URL,$url);
@@ -22,16 +22,16 @@ $from = $update->message->from->id;
 
   if(preg_match('/^([Hh]ttp|[Hh]ttps)(.*)/',$text)){
     $short = file_get_contents('http://yeo.ir/api.php?url='.$text);
-    roonx('sendMessage',[
+    346881180:AAEtvHhmLRTWzAGVJGTyEUaFmmi4VUhPIN4nx('sendMessage',[
       'chat_id'=>$chat_id,
-      'text'=>"لینک شما کوتاه شد: ".$short."\n\n@Roonx_Team",
+      'text'=>"لینک شما کوتاه شد: ".$short."\n\n@applox3",
       'parse_mode'=>'HTML'
     ]);
   }
   if(preg_match('/^\/([sS]tart)/',$text)){
 	  roonx('sendMessage',[
       'chat_id'=>$chat_id,
-      'text'=>"Hi!\nPlease Send A URL\n\n<b>Creator:</b> @Roonx_Team",
+      'text'=>"Hi!\nPlease Send A URL\n\n<b>Creator:</b> @applox3",
       'parse_mode'=>'HTML'
     ]);
   }
